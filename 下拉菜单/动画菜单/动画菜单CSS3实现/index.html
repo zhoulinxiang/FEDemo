@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../util/reset.css">
+    <style>
+        .nav{
+            width: 960px;
+            margin: 0 auto;
+            border: 1px solid #222;
+            background-image: linear-gradient(#444,#111);
+            border-radius: 6px;
+            box-shadow: 0 1px 1px #777;
+            /*overflow: auto;*/
+
+        }
+        .nav li{
+            float:left;
+            /*border-right: 1px solid #222;*/
+            box-shadow: 1px 0 0 #444;
+            position: relative;
+        }
+        .nav li a{
+            float: left;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 0 1px 0 #000;
+        }
+        .nav li a:hover{
+            color: #fafafa;
+        }
+        .nav li ul{
+            /*visibility:hidden;*/
+            position: absolute;
+            top:50px;
+            left: 0;
+            padding:0;
+            background-color: #444;
+            background-image: linear-gradient(#444,#111);
+            box-shadow:0 -1px 0 rgba(111,111,111,1);
+            border-radius: 3px;
+            opacity: 0;
+            margin: 20px 0 0 0;
+            transition: all .2s ease-in-out;
+        }
+        .nav li:hover > ul{
+            opacity: 1;
+            margin: 0;
+        }
+        .nav ul li {
+            float: none;
+            display: block;
+            /*position:relative;*/
+            /*box-shadow: 0 1px 0 #111 ;*/
+        }
+        .nav ul a{
+            box-shadow: 0 1px 0 #111,0 2px 0 #666;
+            float:none;
+            display: block;
+            width: 120px;
+            padding: 10px;
+
+        }
+        .nav ul a:hover{
+            background-color:#0186ba;
+            background-image:linear-gradient(#04acec,#0186ba);
+        }
+        .nav ul li:first-child > a{
+            border-radius: 3px 3px 0 0;
+        }
+        .nav ul li:last-child > a{
+            border-radius: 0 0 3px 3px;
+
+        }
+        .nav ul li:first-child>a:before{
+            content: '';
+            position: absolute;
+            left:40px;
+            top:-6px;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #444;
+
+        }
+        .nav ul li:first-child > a:hover:before{
+            border-bottom-color: #04acec ;
+        }
+        .nav ul ul{
+            display: block;
+            top:0;
+            left: 146px;
+            margin: 0 0 0 20px;
+            box-shadow:0 -1px 0 rgba(255,255,255,.3);
+        }
+        .nav ul ul li:first-child  a:before{
+            position: absolute;
+            /*content:"haha";*/
+            /*display: block;*/
+            left:-12px;
+            top:22px;
+            border-top: 6px solid transparent;
+            border-right: 6px solid #333;
+            border-bottom: 6px solid transparent;
+
+        }
+        .nav ul ul li:first-child a:hover:before{
+            border-right-color: #0299d3;
+            border-bottom-color: transparent ;
+
+        }
+    </style>
+</head>
+<body>
+<div >
+    <ul class="nav clearfix">
+        <li class="mainlevel"><a href="#"> <span class="note">慕课网</span></a></li>
+        <li class="mainlevel" id="mainlevel_01"><a href="#">课程大厅</a></li>
+        <li class="mainlevel" id="mainlevel_02"><a href="#">学习中心</a>
+           <ul>
+               <li><a href="#">前端学习</a>
+               <ul >
+                   <li><a href="#">html</a></li>
+                   <li><a href="#">css</a></li>
+                   <li><a href="#">js</a></li>
+                   <li><a href="#">jq</a></li>
+               </ul>
+               </li>
+               <li><a href="#">后端学习</a></li>
+               <li><a href="#">客户端学习</a></li>
+           </ul>
+
+        </li>
+        <li class="mainlevel"><a href="#">个人中心</a></li>
+        <li class="mainlevel"><a href="#">关于我们</a></li>
+
+    </ul>
+</div>
+
+</body>
+</html>

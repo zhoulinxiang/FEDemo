@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <title></title>
     <script type="text/javascript" src="../util/js/jquery-1.11.3.js"></script>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border: 1px solid red;
+        }
+        #box{
+
+            /*visibility: hidden;*/
+        }
+    </style>
 </head>
 <body>
-<form id="form" action="">
-     <input type="button" value="cl">
-</form>
+<input id = "button" type="button" value="haha">
 <div id="box"></div>
-<script>
-    $(function () {
+<div id="box2"></div>
 
-        [Error] Failed to load resource: the server responded with a status of 404 (Not Found) (jquery.min.map, line 0)
-    })
-</script>
 <script>
-    document.write("haha");
+    $(
+            function () {
+                $("#button").click(
+                        function(){
+//                            alert("haha");
+                        $("#box").hide(10000);
+                         })
+
+            }
+    );
+    var object ={
+        hha:"haha",
+        h-ha:"haha",
+
+    }
 </script>
+
 </body>
 </html>
